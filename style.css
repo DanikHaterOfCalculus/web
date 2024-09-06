@@ -1,0 +1,11 @@
+.urls {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    margin-top: 20px;
+}
+    .urls span {
+        margin: 0 10px;
+    }
+
+    
