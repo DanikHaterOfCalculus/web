@@ -1,16 +1,195 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Catdog</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catdog Animal Shelter</title>
+    <style>
+        /* Inline styles as required */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            border-left: 10px solid #31708E; /* Frame on the left */
+            border-right: 10px solid #31708E; /* Frame on the right */
+            background-color: #F7F9FB; /* Background color */
+            color: #687864; /* Text color */
+            box-sizing: border-box; /* Ensures padding does not affect total width */
+        }
+
+        header {
+            background-color: #31708E; /* Header background color */
+            color: #F7F9FB; /* Header text color */
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+            nav a {
+                margin: 0 15px;
+                color: #F7F9FB; /* Link color */
+                text-decoration: none;
+            }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #31708E; /* Footer background color */
+            color: #F7F9FB; /* Footer text color */
+            text-align: center;
+            padding: 1em;
+        }
+
+        /* Centering the section content */
+        section {
+            text-align: center;
+        }
+
+        blockquote {
+            text-align: center;
+            margin: 20px auto;
+            font-style: italic;
+        }
+
+        .info-spans {
+            display: flex; /* Use Flexbox for alignment */
+            justify-content: center; /* Center the content horizontally */
+            gap: 50px; /* Adds space between each span */
+            margin-top: 20px;
+        }
+
+        .info-span {
+            font-weight: bold;
+            font-size: 18px; /* Optional: Increase font size for emphasis */
+            color: #31708E; /* Span text color */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+            .info-span:hover {
+                text-decoration: underline; /* Underline on hover */
+            }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* Stretches items to the height of the container */
+            gap: 20px; /* Adds space between the form and images */
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 600px; /* Adjust the width as needed */
+            width: 100%;
+            height: 400px; /* Set a fixed height for the form */
+            padding: 20px;
+            background-color: #8FC1E3;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        }
+
+            form label {
+                display: block;
+                margin-bottom: 10px;
+                color: #31708E; /* Label color */
+            }
+
+            form input,
+            form select,
+            form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #5985A5; /* Border color */
+                border-radius: 4px; /* Rounded corners */
+                box-sizing: border-box; /* Ensure padding does not affect width */
+            }
+
+            form button {
+                background-color: #31708E; /* Button background color */
+                color: #F7F9FB; /* Button text color */
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px; /* Rounded corners */
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+                form button:hover {
+                    background-color: #5985A5; /* Button hover color */
+                }
+
+        .image-container {
+            width: 100%; /* Ensures images take full width of their container */
+            max-width: 300px; /* Adjust as needed */
+            height: 400px; /* Matches the height of the form */
+            overflow: hidden; /* Hides any part of the image that overflows */
+            position: relative; /* Needed for positioning child elements */
+        }
+
+        .form-image {
+            width: 100%;
+            height: 100%; /* Matches the height of the form */
+            object-fit: cover; /* Ensures the image covers the container without stretching */
+            display: block; /* Removes any extra space below the image */
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align:center;">Welcome to "Catdog" Animal Shelter Website</h1>
-    <img src="#" width="1500" height="250" alt="Animal Shelter Image">
-    <div class="urls">
-        <span><a href="#">1</a></span>
-        <span><a href="#">2</a></span>
-        <span><a href="#">3</a></span>
-        <span><a href="#">4</a></span>
-    </div>
+    <header>
+        <h1>Welcome to "Catdog" Animal Shelter</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Adopt</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About Our Shelter</h2>
+            <p>At Catdog Animal Shelter, we are dedicated to finding loving homes for cats and dogs in need. Our shelter is a safe haven for stray, abandoned, and rescued pets who are looking for their forever homes.</p>
+            <figure>
+                <img src="https://www.aspca.org/sites/default/files/keeping-animals-in-homes_pet-statistics_main-image.jpg" alt="Cats and Dogs Image" width="500">
+                <figcaption>A photo of our loving cats and dogs at the shelter.</figcaption>
+            </figure>
+        </section>
+        <blockquote cite="https://www.goodreads.com">
+            "Until one has loved an animal, a part of one's soul remains unawakened." - Anatole France
+        </blockquote>
+        <div class="form-container">
+            <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI990iNHzz5SI2hSUV5NV3p48Le6PiDThXsg&s" alt="Placeholder Image" class="form-image">
+            </div>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="request-type">Request Type:</label>
+                <select id="request-type" name="request-type">
+                    <option value="adopt">Adopt</option>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="donate">Donate</option>
+                </select>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI990iNHzz5SI2hSUV5NV3p48Le6PiDThXsg&s" alt="Placeholder Image" class="form-image">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Created by Turzhanov Danial, Ussenov Tamerlan, Kurbanaliyeva Rakhiya - September 2024</p>
+    </footer>
 </body>
 </html>
