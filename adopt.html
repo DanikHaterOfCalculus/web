@@ -9,12 +9,12 @@
     <header style="background-color: #31708e; color: #f7f9fb; text-align: center; padding: 1.5em 0;">
         <h1>Adopt a Pet</h1>
         <nav style="margin-top: 10px; text-align: center;">
-        <a href="index.html" style="margin: 0 15px; color: #F7F9FB;">Home</a>
-        <a href="#" style="margin: 0 15px; color: #F7F9FB;">About Us</a>
-        <a href="g.html" style="margin: 0 15px; color: #F7F9FB;">Pet gallery</a>
-        <a href="adopt.html" style="margin: 0 15px; color: #F7F9FB;">Adopt</a>
-        <a href="donate.html" style="margin: 0 15 px; color: #F7F9FB;">Donate</a>
-        <a href="#" style="margin: 0 15px; color: #F7F9FB;">Contact</a>
+            <a href="index.html" style="margin: 0 15px; color: #F7F9FB;">Home</a>
+            <a href="#" style="margin: 0 15px; color: #F7F9FB;">About Us</a>
+            <a href="g.html" style="margin: 0 15px; color: #F7F9FB;">Pet gallery</a>
+            <a href="adopt.html" style="margin: 0 15px; color: #F7F9FB;">Adopt</a>
+            <a href="donate.html" style="margin: 0 15 px; color: #F7F9FB;">Donate</a>
+            <a href="#" style="margin: 0 15px; color: #F7F9FB;">Contact</a>
         </nav>
     </header>
     <main style="padding: 40px 20px; background-image: url('https://www.aspca.org/sites/default/files/pet-food-assistance.jpg'); background-size: cover; background-position: center; color: #f7f9fb;">
@@ -78,4 +78,20 @@
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("adoptionForm");
             const progressBarInner = document.querySelector(".progress-bar-inner");
-            const formFields = form.querySelector
+            const formFields = form.querySelectorAll("input, select, textarea");
+
+            form.addEventListener("input", function () {
+                let filledFields = 0;
+                formFields.forEach(function (field) {
+                    if (field.value.trim() !== "") {
+                        filledFields++;
+                    }
+                });
+                const progress = (filledFields / formFields.length) * 100;
+                progressBarInner.style.width = progress + "%";
+            });
+        });
+    </script>
+</body>
+</html>
+
